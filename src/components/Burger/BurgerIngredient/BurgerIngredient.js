@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import classes from './BurgerIngredient.css';
 
 class BurgerIngredient extends Component {
-    propTypes = {
-        type: PropTypes.string.isRequired
-    };
-
     render () {
         const ingredients = {
             'bread-bottom': <div className={classes.BreadBottom}></div>,
@@ -26,5 +22,9 @@ class BurgerIngredient extends Component {
         return ingredients[this.props.type] ? ingredients[this.props.type] : null;
     }
 }
+
+BurgerIngredient.propTypes = {
+    type: PropTypes.string.isRequired
+};
 
 export default BurgerIngredient;
